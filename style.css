@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images2.imgbox.com/46/33/km24L7dv_o.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    z-index: 10;
+  }
+  
+  .navbar_netflix {
+    height: 100%;
+    width: 125px;
+  }
+  
+  .navbar_nav_items {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .netflix_logo {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav_item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .language_drop_down {
+    margin-right: 10px;
+  }
+  
+  .signin_button {
+    background-color: red;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .signin_button:hover {
+    background-color: white;
+    color: red;
+  }
+  
+  main {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+  }
+
+  .login-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-form h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .login-form button {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .login-form {
+      width: 90%;
+    }
+  }
+
