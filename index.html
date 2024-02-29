@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Brasil - Assista Séries e Filmes Online</title>
+  <link rel="stylesheet" href="font-awesome-4.7.0.css"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar_netflix">
+        <img src="https://images2.imgbox.com/8f/0a/ayxPQgJ7_o.png" alt="Netflix logo" class="netflix_logo" />
+      </div>
+      <div class="navbar_nav_items">
+        <div class="nav_item">
+          <select name="language" id="languageSelect" class="language_drop_down">
+            <option value="english">English</option>
+            <option value="portuguese" selected>Português</option> </select>
+          <button class="signin_button" id="signinButton">Entrar</button> </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Milhares de filmes, séries e documentários.</h1>
+    <p>Sempre há algo novo para assistir na Netflix.</p>
+  </main>
+
+  <script>
+    const signinButton = document.getElementById("signinButton");
+
+    signinButton.addEventListener("click", function() {
+  // Crie um elemento `div` para a tela de login
+  const loginForm = document.createElement("div");
+  loginForm.classList.add("login-form");
+
+  // Adicione o título da tela de login
+  const loginTitle = document.createElement("h1");
+  loginTitle.textContent = "Entrar";
+  loginForm.appendChild(loginTitle);
+
+  // Adicione o campo de usuário
+  const usernameLabel = document.createElement("label");
+  usernameLabel.textContent = "Usuário";
+  loginForm.appendChild(usernameLabel);
+
+  const usernameInput = document.createElement("input");
+  usernameInput.type = "text";
+  usernameInput.name = "username";
+  loginForm.appendChild(usernameInput);
+
+  // Adicione o campo de senha
+  const passwordLabel = document.createElement("label");
+  passwordLabel.textContent = "Senha";
+  loginForm.appendChild(passwordLabel);
+
+  const passwordInput = document.createElement("input");
+  passwordInput.type = "password";
+  passwordInput.name = "password";
+  loginForm.appendChild(passwordInput);
+
+  // Adicione o botão de login
+  const loginButton = document.createElement("button");
+  loginButton.textContent = "Entrar";
+  loginForm.appendChild(loginButton);
+
+  // Adicione a tela de login ao corpo da página
+  document.body.appendChild(loginForm);
+
+  // Lógica de validação de login
+  loginButton.addEventListener("click", function() {
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    // Valide as credenciais do usuário (substitua por sua lógica real)
+    const isValidLogin = (username === "usuario" && password === "senha");
+
+    if (isValidLogin) {
+      // Ocultar a tela de login
+      loginForm.style.display = "none";
+
+      alert("Login realizado com sucesso!");
+      
+      window.location.href = "https://www.netflix.com/br/";
+    } else {
+      // Exibir mensagem de erro
+      alert("Usuário ou senha inválidos!");
+    }
+  });
+});
+  </script>
+</body>
+</html>
